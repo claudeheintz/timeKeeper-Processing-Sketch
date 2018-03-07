@@ -49,39 +49,7 @@ public class LXPAdjustMinusButton extends LXPButton {
  
 LXPAdjustMinusButton minusButton;
 
-// most locations and sizes are calculated from width and height after fullScreen()
-int progress_h = 75;
-int progress_w = 700;
 
-int elapsed_x = 375;
-int remaining_x = 1025;
-int elapsed_remaining_y = 250;
-
-int bottom_y = 710;
-int center_x = 700;
-int center_y = 370;
-int progress_y = 300;
-int progress_x = 350;
-
-int bottom_dy = 100;             //50
-
-int timeDiffButton_w = 100;      //50;
-int timeDiffButton_h = 80;       //40;
-int timeDiffButton_dx = 200;     //100
-int timeDiffButton_dy = 75;      //25
-int timeDiffText_dx = (timeDiffButton_dx+timeDiffButton_w)/2;
-float timeDiffFontSize = 48.0f;//24.0f
-
-int onDeck_x = 100;               // 100
-float onDeckFontSize = 64.0f;     // 32.0f
-
-float nowTimeFontSize = 96.0f;                  // 48.0f
-int nowTime_dy = 100;                           // 50
-float elapsedRemainingFontSize = 150.0f;        // 72.0f
-float elapsedRemainingLabelFontSize = 48.0f;    // 32.0f
-int elapsedRemainingLabel_dy = 200;             // 100
-
-float currentTitleFontSize = 96.0f;             // 64.0f
 
 void setup() {
   //size(1400, 740);
@@ -92,24 +60,24 @@ void setup() {
   
   
   // compute size & locations for screen
-  progress_w = (3 * width) / 4;
+  tkux.progress_w = (3 * width) / 4;
   
-  bottom_y = height - bottom_dy;
-  center_x = width/2;
-  center_y = height/2;
-  progress_y = center_y - progress_h;
-  progress_x = center_x - (progress_w/2);
+  tkux.bottom_y = height - tkux.bottom_dy;
+  tkux.center_x = width/2;
+  tkux.center_y = height/2;
+  tkux.progress_y = tkux.center_y - tkux.progress_h;
+  tkux.progress_x = tkux.center_x - (tkux.progress_w/2);
   
-  elapsed_x = progress_x + 200;
-  remaining_x = progress_x + progress_w - 200;
-  elapsed_remaining_y = progress_y - progress_h - 30;
+  tkux.elapsed_x = tkux.progress_x + 200;
+  tkux.remaining_x = tkux.progress_x + tkux.progress_w - 200;
+  tkux.elapsed_remaining_y = tkux.progress_y - tkux.progress_h - 30;
   
-  plusButton = new LXPAdjustPlusButton(remaining_x,
-                                        bottom_y-timeDiffButton_dy,
-                                        timeDiffButton_w, timeDiffButton_h, "+");
-  minusButton = new LXPAdjustMinusButton(remaining_x+timeDiffButton_dx,
-                                        bottom_y-timeDiffButton_dy,
-                                        timeDiffButton_w, timeDiffButton_h, "-");
+  plusButton = new LXPAdjustPlusButton(tkux.remaining_x,
+                                        tkux.bottom_y-tkux.timeDiffButton_dy,
+                                        tkux.timeDiffButton_w, tkux.timeDiffButton_h, "+");
+  minusButton = new LXPAdjustMinusButton(tkux.remaining_x+tkux.timeDiffButton_dx,
+                                        tkux.bottom_y-tkux.timeDiffButton_dy,
+                                        tkux.timeDiffButton_w, tkux.timeDiffButton_h, "-");
 }
 
 
