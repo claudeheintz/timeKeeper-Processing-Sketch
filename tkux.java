@@ -6,7 +6,7 @@ import processing.core.*;
 public class tkux {
 
 	// most locations and sizes are calculated from width and height after fullScreen() or size()
-static	    int progress_h = 75;
+static    int progress_h = 75;
 
 static  	int progress_w = 700;
 
@@ -42,6 +42,7 @@ static  	float elapsedRemainingLabelFontSize = 32.0f;     // 32.0f     --48.0f
 static  	int elapsedRemainingLabel_dy = 100;              // 100       --200
 
 static  	float currentTitleFontSize = 64.0f;              // 64.0f     --96.0f
+static    int   currentTitle_dy = 200;                     // 200       --255
 
 public static final int DEFAULT_UX_TYPE = 0;
 public static final int HDPI_UX_TYPE    = 1;
@@ -60,6 +61,9 @@ public static final int HDPI_UX_TYPE    = 1;
 	  tkux.elapsed_remaining_y = tkux.progress_y - tkux.progress_h - 30;
   
 	  if ( type == HDPI_UX_TYPE ) {
+      progress_h = 125;
+      currentTitle_dy = 255;
+      
 			bottom_dy = 100;                             //50         --100
   
 			timeDiffButton_w = 100;                      //50;        --100
