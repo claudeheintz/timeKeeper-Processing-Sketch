@@ -1,21 +1,21 @@
-Carleton, In Tune	02/28/18 11:00:00am CST	02/28/18 8:13:00am CST
-U MN Morris, Detachment	02/28/18 11:15:00am CST	02/28/18 11:18:00am CST
-UNI, Elemental	02/28/18 11:20:00am CST	02/28/18 11:23:00am CST
-UNI, Justify	02/28/18 11:25:00am CST	02/28/18 11:28:00am CST
-UW River Falls, unTitled IX	02/28/18 11:30:00am CST	02/28/18 11:33:00am CST
-UW River Falls, My Hell…	02/28/18 11:35:00am CST	02/28/18 11:38:00am CST
-UW Madison, Lost In Translation	02/28/18 11:40:00am CST	02/28/18 11:43:00am CST
-UW Madison, The Other and One	02/28/18 11:45:00am CST	02/28/18 11:48:00am CST
-Columbia, Gravity Falls	02/28/18 2:02:00pm CST	02/28/18 2:18:00pm CST
-Columbia, Who R U?	02/28/18 2:20:00pm CST	02/28/18 2:36:00pm CST
-Gustavus, From One Place…	02/28/18 2:38:00pm CST	02/28/18 2:54:00pm CST
-Gustavus, Room 31	02/28/18 2:56:00pm CST	02/28/18 3:12:00pm CST
-Hamline, V(ulnerable)	02/28/18 3:14:00pm CST	02/28/18 3:30:00pm CST
-Hamline, Finding Home	02/28/18 3:32:00pm CST	02/28/18 3:48:00pm CST
-U NE, One of Two Circles	02/28/18 3:50:00pm CST	02/28/18 4:06:00pm CST
-U NE, Your Thumb is Always…	02/28/18 4:08:00pm CST	02/28/18 4:24:00pm CST
-U IA, In Air to the Bone	02/28/18 4:26:00pm CST	02/28/18 4:42:00pm CST
-U IA, Mommie Queerest	02/28/18 4:44:00pm CST	02/28/18 5:00:00pm CST
+Carleton, In Tune	03/07/18 11:00:00am CST	03/07/18 8:13:00am CST
+U MN Morris, Detachment	03/07/18 11:15:00am CST	03/07/18 11:18:00am CST
+UNI, Elemental	03/07/18 11:20:00am CST	03/07/18 11:23:00am CST
+UNI, Justify	03/07/18 11:25:00am CST	03/07/18 11:28:00am CST
+UW River Falls, unTitled IX	03/07/18 11:30:00am CST	03/07/18 11:33:00am CST
+UW River Falls, My Hell…	03/07/18 11:35:00am CST	03/07/18 11:38:00am CST
+UW Madison, Lost In Translation	03/07/18 11:40:00am CST	03/07/18 11:43:00am CST
+UW Madison, The Other and One	03/07/18 1:45:00pm CST	03/07/18 1:55:00pm CST
+Columbia, Gravity Falls	03/07/18 2:02:00pm CST	03/07/18 2:18:00pm CST
+Columbia, Who R U?	03/07/18 2:20:00pm CST	03/07/18 2:36:00pm CST
+Gustavus, From One Place…	03/07/18 2:38:00pm CST	03/07/18 2:54:00pm CST
+Gustavus, Room 31	03/07/18 2:56:00pm CST	03/07/18 3:12:00pm CST
+Hamline, V(ulnerable)	03/07/18 3:14:00pm CST	03/07/18 3:30:00pm CST
+Hamline, Finding Home	03/07/18 3:32:00pm CST	03/07/18 3:48:00pm CST
+U NE, One of Two Circles	03/07/18 3:50:00pm CST	03/07/18 4:06:00pm CST
+U NE, Your Thumb is Always…	03/07/18 4:08:00pm CST	03/07/18 4:24:00pm CST
+U IA, In Air to the Bone	03/07/18 4:26:00pm CST	03/07/18 4:42:00pm CST
+U IA, Mommie Queerest	03/07/18 4:44:00pm CST	03/07/18 5:00:00pm CST
 Beloit, THE CHROMATIC GOSPEL	03/02/18 8:00:00am CST	03/02/18 8:16:00am CST
 Beloit, 2mi via I-80 W	03/02/18 8:18:00am CST	03/02/18 8:34:00am CST
 IA State, HEAR/HERE	03/02/18 8:36:00am CST	03/02/18 8:52:00am CST
