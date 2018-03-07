@@ -35,13 +35,13 @@ static      int timeDiffText_dx = (timeDiffButton_dx+timeDiffButton_w)/2;
 static  	int onDeck_x = 100;                              // 100       --100
 static  	float onDeckFontSize = 32.0f;                    // 32.0f     --64.0f
 
-static  	float nowTimeFontSize = 96.0f;                   // 48.0f     --96.0f
-static  	int nowTime_dy = 100;                             // 50       --100
-static  	float elapsedRemainingFontSize = 150.0f;          // 72.0f    --150.0f
-static  	float elapsedRemainingLabelFontSize = 48.0f;     // 32.0f     --48.0f
-static  	int elapsedRemainingLabel_dy = 200;              // 100       --200
+static  	float nowTimeFontSize = 48.0f;                   // 48.0f     --96.0f
+static  	int nowTime_dy = 50;                             // 50       --100
+static  	float elapsedRemainingFontSize = 72.0f;          // 72.0f    --150.0f
+static  	float elapsedRemainingLabelFontSize = 32.0f;     // 32.0f     --48.0f
+static  	int elapsedRemainingLabel_dy = 100;              // 100       --200
 
-static  	float currentTitleFontSize = 96.0f;              // 64.0f     --96.0f
+static  	float currentTitleFontSize = 64.0f;              // 64.0f     --96.0f
 
 public static final int DEFAULT_UX_TYPE = 0;
 public static final int HDPI_UX_TYPE    = 1;
