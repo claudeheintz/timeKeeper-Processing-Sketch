@@ -74,13 +74,12 @@ public static final int HDPI_UX_TYPE    = 1;
   
 			nowTimeFontSize = 96.0f;                     // 48.0f     --96.0f
 			nowTime_dy = 100;                            // 50        --100
-			elapsedRemainingFontSize = 150.0f;           // 72.0f     --150.0f
+			elapsedRemainingFontSize = 160.0f;           // 72.0f     --150.0f
 			elapsedRemainingLabelFontSize = 48.0f;       // 32.0f     --48.0f
 			elapsedRemainingLabel_dy = 200;              // 100       --200
   
-			currentTitleFontSize = 96.0f;                // 64.0f     --96.0f    
+			currentTitleFontSize = 112.0f;                // 64.0f     --96.0f    
 	  }
 	}
 
 } // <- class tkux
-
