@@ -61,8 +61,8 @@ public static final int HDPI_UX_TYPE    = 1;
 	  tkux.elapsed_remaining_y = tkux.progress_y - tkux.progress_h - 30;
   
 	  if ( type == HDPI_UX_TYPE ) {
-      progress_h = 125;
-      currentTitle_dy = 255;
+      progress_h = 150;
+      currentTitle_dy = 280;
       
 			bottom_dy = 100;                             //50         --100
   
