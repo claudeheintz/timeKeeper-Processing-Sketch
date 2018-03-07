@@ -59,19 +59,9 @@ void setup() {
   times = new TimePeriods(sketchPath("")+"/timekeeper.txt");
   getNextPeriod();
   
-  
   // compute size & locations for screen
-  tkux.progress_w = (3 * width) / 4;
-  
-  tkux.bottom_y = height - tkux.bottom_dy;
-  tkux.center_x = width/2;
-  tkux.center_y = height/2;
-  tkux.progress_y = tkux.center_y - tkux.progress_h;
-  tkux.progress_x = tkux.center_x - (tkux.progress_w/2);
-  
-  tkux.elapsed_x = tkux.progress_x + 200;
-  tkux.remaining_x = tkux.progress_x + tkux.progress_w - 200;
-  tkux.elapsed_remaining_y = tkux.progress_y - tkux.progress_h - 30;
+  tkux.initForApplet(this, tkux.DEFAULT_UX_TYPE);
+  //tkux.initForApplet(this, tkux.HDPI_UX_TYPE);
   
   plusButton = new LXPAdjustPlusButton(tkux.remaining_x,
                                         tkux.bottom_y-tkux.timeDiffButton_dy,
