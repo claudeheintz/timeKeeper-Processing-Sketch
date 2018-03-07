@@ -125,7 +125,7 @@ void draw() {
     
     textSize(tkux.currentTitleFontSize);
     textAlign(PApplet.CENTER);
-    text(current.title, width/2, tkux.progress_y+200);
+    text(current.title, width/2, tkux.progress_y+tkux.currentTitle_dy);
     
     // --------------- progress bar ---------------
     if ( et > 0 ) {

@@ -6,7 +6,7 @@ import processing.core.*;
 public class tkux {
 
 	// most locations and sizes are calculated from width and height after fullScreen() or size()
-static	    int progress_h = 75;
+static    int progress_h = 75;
 
 static  	int progress_w = 700;
 
@@ -42,6 +42,7 @@ static  	float elapsedRemainingLabelFontSize = 32.0f;     // 32.0f     --48.0f
 static  	int elapsedRemainingLabel_dy = 100;              // 100       --200
 
 static  	float currentTitleFontSize = 64.0f;              // 64.0f     --96.0f
+static    int   currentTitle_dy = 200;                     // 200       --255
 
 public static final int DEFAULT_UX_TYPE = 0;
 public static final int HDPI_UX_TYPE    = 1;
@@ -60,6 +61,9 @@ public static final int HDPI_UX_TYPE    = 1;
 	  tkux.elapsed_remaining_y = tkux.progress_y - tkux.progress_h - 30;
   
 	  if ( type == HDPI_UX_TYPE ) {
+      progress_h = 150;
+      currentTitle_dy = 280;
+      
 			bottom_dy = 100;                             //50         --100
   
 			timeDiffButton_w = 100;                      //50;        --100
@@ -74,13 +78,12 @@ public static final int HDPI_UX_TYPE    = 1;
   
 			nowTimeFontSize = 96.0f;                     // 48.0f     --96.0f
 			nowTime_dy = 100;                            // 50        --100
-			elapsedRemainingFontSize = 150.0f;           // 72.0f     --150.0f
+			elapsedRemainingFontSize = 160.0f;           // 72.0f     --150.0f
 			elapsedRemainingLabelFontSize = 48.0f;       // 32.0f     --48.0f
 			elapsedRemainingLabel_dy = 200;              // 100       --200
   
-			currentTitleFontSize = 96.0f;                // 64.0f     --96.0f    
+			currentTitleFontSize = 112.0f;                // 64.0f     --96.0f    
 	  }
 	}
 
 } // <- class tkux
-
