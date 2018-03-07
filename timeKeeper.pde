@@ -49,44 +49,38 @@ public class LXPAdjustMinusButton extends LXPButton {
  
 LXPAdjustMinusButton minusButton;
 
-// most locations and sizes are calculated from width and height after fullScreen()
-int progress_h = 75;
-int progress_w = 700;
-
-int elapsed_x = 375;
-int remaining_x = 1025;
-int elapsed_remaining_y = 250;
-
-int bottom_y = 710;
-int center_x = 700;
-int center_y = 370;
-int progress_y = 300;
-int progress_x = 350;
 
 
 void setup() {
   size(1400, 740);
-  //fullScreen();
+  if ( tkux.use_full_screen ) {
+    fullScreen();
+  }
+  
   frameRate(10);
   times = new TimePeriods(sketchPath("")+"/timekeeper.txt");
   getNextPeriod();
   
   
   // compute size & locations for screen
-  progress_w = (3 * width) / 4;
+  tkux.progress_w = (3 * width) / 4;
   
-  bottom_y = height - 50;
-  center_x = width/2;
-  center_y = height/2;
-  progress_y = center_y - progress_h;
-  progress_x = center_x - (progress_w/2);
+  tkux.bottom_y = height - tkux.bottom_dy;
+  tkux.center_x = width/2;
+  tkux.center_y = height/2;
+  tkux.progress_y = tkux.center_y - tkux.progress_h;
+  tkux.progress_x = tkux.center_x - (tkux.progress_w/2);
   
-  elapsed_x = progress_x + 200;
-  remaining_x = progress_x + progress_w - 200;
-  elapsed_remaining_y = progress_y - progress_h - 30;
+  tkux.elapsed_x = tkux.progress_x + 200;
+  tkux.remaining_x = tkux.progress_x + tkux.progress_w - 200;
+  tkux.elapsed_remaining_y = tkux.progress_y - tkux.progress_h - 30;
   
-  plusButton = new LXPAdjustPlusButton(1200, bottom_y-25, 50, 40, "+");
-  minusButton = new LXPAdjustMinusButton(1300, bottom_y-25, 50, 40, "-");
+  plusButton = new LXPAdjustPlusButton(tkux.remaining_x,
+                                        tkux.bottom_y-tkux.timeDiffButton_dy,
+                                        tkux.timeDiffButton_w, tkux.timeDiffButton_h, "+");
+  minusButton = new LXPAdjustMinusButton(tkux.remaining_x+tkux.timeDiffButton_dx,
+                                        tkux.bottom_y-tkux.timeDiffButton_dy,
+                                        tkux.timeDiffButton_w, tkux.timeDiffButton_h, "-");
 }
 
 
@@ -94,26 +88,26 @@ void draw() {
   background(0);
   
   //adjust buttons
-  textSize(24.0f);
+  textSize(tkux.timeDiffFontSize);
   plusButton.draw(this);
   minusButton.draw(this);
   
   // time adjustment
   textAlign(PApplet.CENTER);
   fill(255);
-  text(Long.toString(adjust/60000), 1275, bottom_y);
+  text(Long.toString(adjust/60000), tkux.remaining_x+tkux.timeDiffText_dx, tkux.bottom_y-(tkux.timeDiffButton_dy/2));
   
   // the current time (now)
   now = new Date();
   nowString = nowDisplayFormat.format(now);
-  textSize(48.0f);
+  textSize(tkux.nowTimeFontSize);
   fill(255);
-  text(nowString, width/2 , 50);
+  text(nowString, width/2 , tkux.nowTime_dy);
   
   // on deck
-  textSize(32.0f);
+  textSize(tkux.onDeckFontSize);
   textAlign(PApplet.LEFT);
-  text("On Deck: " + onDeck, 100, bottom_y);
+  text("On Deck: " + onDeck, tkux.onDeck_x, tkux.bottom_y);
   
   // --------------- current time period ---------------
   
@@ -129,31 +123,31 @@ void draw() {
     
     // --------------- elapsed/remaining ---------------
     
-    textSize(72.0f);
+    textSize(tkux.elapsedRemainingFontSize);
     textAlign(PApplet.RIGHT);
-    text(elapsedString, elapsed_x, elapsed_remaining_y);
-    textSize(32.0f);
-    text("Elapsed: ", elapsed_x, elapsed_remaining_y-100);
+    text(elapsedString, tkux.elapsed_x, tkux.elapsed_remaining_y);
+    textSize(tkux.elapsedRemainingLabelFontSize);
+    text("Elapsed: ", tkux.elapsed_x, tkux.elapsed_remaining_y-tkux.elapsedRemainingLabel_dy);
     
-    textSize(72.0f);
+    textSize(tkux.elapsedRemainingFontSize);
     textAlign(PApplet.LEFT);
-    text(remainingString, remaining_x, elapsed_remaining_y);
-    textSize(32.0f);
-    text("Remaining: ", remaining_x, elapsed_remaining_y-100);
+    text(remainingString, tkux.remaining_x, tkux.elapsed_remaining_y);
+    textSize(tkux.elapsedRemainingLabelFontSize);
+    text("Remaining: ", tkux.remaining_x, tkux.elapsed_remaining_y-tkux.elapsedRemainingLabel_dy);
     
-    textSize(64.0f);
+    textSize(tkux.currentTitleFontSize);
     textAlign(PApplet.CENTER);
-    text(current.title, width/2, progress_y+200);
+    text(current.title, width/2, tkux.progress_y+200);
     
     // --------------- progress bar ---------------
     if ( et > 0 ) {
       fill(64, 64, 96);
-      rect(progress_x,progress_y, progress_w, progress_h);
+      rect(tkux.progress_x,tkux.progress_y, tkux.progress_w, tkux.progress_h);
       
       if ( rt < 0 ) {
         et = duration;
       }
-      ex = map(et, 0, duration, 0, progress_w);
+      ex = map(et, 0, duration, 0, tkux.progress_w);
       
       if ( rt > 120000 ) {
         fill(0, 255, 0);
@@ -162,7 +156,7 @@ void draw() {
       } else {
         fill(255, 0, 0);
       }
-      rect(progress_x, progress_y, ex, progress_h);
+      rect(tkux.progress_x, tkux.progress_y, ex, tkux.progress_h);
       
       if ( current.checkCompleted(n) ) {
         getNextPeriod();
@@ -172,6 +166,14 @@ void draw() {
     
   }    // current != null
   
+}
+
+void mousePressed() {
+  if ( mouseX > width - 200 ) {
+    if ( mouseY < 200 ) {
+      exit();
+    }
+  }
 }
 
 void mouseReleased() {
