@@ -53,9 +53,7 @@ LXPAdjustMinusButton minusButton;
 
 void setup() {
   size(1400, 740);
-  if ( tkux.use_full_screen ) {
-    fullScreen();
-  }
+  //fullScreen();
   
   frameRate(10);
   times = new TimePeriods(sketchPath("")+"/timekeeper.txt");

@@ -18,7 +18,6 @@ static  	int progress_x = 350;
 
 //-------------------------------------------- non computed values
 //                                                         //mac   --HDPI
-static    boolean use_full_screen = false;
 
 static  	int bottom_dy = 50;                              //50     --100
 
