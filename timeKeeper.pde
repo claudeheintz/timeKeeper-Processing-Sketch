@@ -85,26 +85,26 @@ void draw() {
   background(0);
   
   //adjust buttons
-  textSize(timeDiffFontSize);
+  textSize(tkux.timeDiffFontSize);
   plusButton.draw(this);
   minusButton.draw(this);
   
   // time adjustment
   textAlign(PApplet.CENTER);
   fill(255);
-  text(Long.toString(adjust/60000), remaining_x+timeDiffText_dx, bottom_y-(timeDiffButton_dy/2));
+  text(Long.toString(adjust/60000), tkux.remaining_x+tkux.timeDiffText_dx, tkux.bottom_y-(tkux.timeDiffButton_dy/2));
   
   // the current time (now)
   now = new Date();
   nowString = nowDisplayFormat.format(now);
-  textSize(nowTimeFontSize);
+  textSize(tkux.nowTimeFontSize);
   fill(255);
-  text(nowString, width/2 , nowTime_dy);
+  text(nowString, width/2 , tkux.nowTime_dy);
   
   // on deck
-  textSize(onDeckFontSize);
+  textSize(tkux.onDeckFontSize);
   textAlign(PApplet.LEFT);
-  text("On Deck: " + onDeck, onDeck_x, bottom_y);
+  text("On Deck: " + onDeck, tkux.onDeck_x, tkux.bottom_y);
   
   // --------------- current time period ---------------
   
@@ -120,31 +120,31 @@ void draw() {
     
     // --------------- elapsed/remaining ---------------
     
-    textSize(elapsedRemainingFontSize);
+    textSize(tkux.elapsedRemainingFontSize);
     textAlign(PApplet.RIGHT);
-    text(elapsedString, elapsed_x, elapsed_remaining_y);
-    textSize(elapsedRemainingLabelFontSize);
-    text("Elapsed: ", elapsed_x, elapsed_remaining_y-elapsedRemainingLabel_dy);
+    text(elapsedString, tkux.elapsed_x, tkux.elapsed_remaining_y);
+    textSize(tkux.elapsedRemainingLabelFontSize);
+    text("Elapsed: ", tkux.elapsed_x, tkux.elapsed_remaining_y-tkux.elapsedRemainingLabel_dy);
     
-    textSize(elapsedRemainingFontSize);
+    textSize(tkux.elapsedRemainingFontSize);
     textAlign(PApplet.LEFT);
-    text(remainingString, remaining_x, elapsed_remaining_y);
-    textSize(elapsedRemainingLabelFontSize);
-    text("Remaining: ", remaining_x, elapsed_remaining_y-elapsedRemainingLabel_dy);
+    text(remainingString, tkux.remaining_x, tkux.elapsed_remaining_y);
+    textSize(tkux.elapsedRemainingLabelFontSize);
+    text("Remaining: ", tkux.remaining_x, tkux.elapsed_remaining_y-tkux.elapsedRemainingLabel_dy);
     
-    textSize(currentTitleFontSize);
+    textSize(tkux.currentTitleFontSize);
     textAlign(PApplet.CENTER);
-    text(current.title, width/2, progress_y+200);
+    text(current.title, width/2, tkux.progress_y+200);
     
     // --------------- progress bar ---------------
     if ( et > 0 ) {
       fill(64, 64, 96);
-      rect(progress_x,progress_y, progress_w, progress_h);
+      rect(tkux.progress_x,tkux.progress_y, tkux.progress_w, tkux.progress_h);
       
       if ( rt < 0 ) {
         et = duration;
       }
-      ex = map(et, 0, duration, 0, progress_w);
+      ex = map(et, 0, duration, 0, tkux.progress_w);
       
       if ( rt > 120000 ) {
         fill(0, 255, 0);
@@ -153,7 +153,7 @@ void draw() {
       } else {
         fill(255, 0, 0);
       }
-      rect(progress_x, progress_y, ex, progress_h);
+      rect(tkux.progress_x, tkux.progress_y, ex, tkux.progress_h);
       
       if ( current.checkCompleted(n) ) {
         getNextPeriod();

@@ -16,6 +16,8 @@ static  	int center_y = 370;
 static  	int progress_y = 300;
 static  	int progress_x = 350;
 
+//-------------------------------------------- non computed values
+
 static  	int bottom_dy = 100;             //50
 
 static  	int timeDiffButton_w = 100;      //50;
