@@ -52,16 +52,16 @@ LXPAdjustMinusButton minusButton;
 
 
 void setup() {
-  size(1400, 740);
-  //fullScreen();
+  //size(1400, 740);
+  fullScreen();
   
   frameRate(10);
   times = new TimePeriods(sketchPath("")+"/timekeeper.txt");
   getNextPeriod();
   
   // compute size & locations for screen
-  tkux.initForApplet(this, tkux.DEFAULT_UX_TYPE);
-  //tkux.initForApplet(this, tkux.HDPI_UX_TYPE);
+  //tkux.initForApplet(this, tkux.DEFAULT_UX_TYPE);
+  tkux.initForApplet(this, tkux.HDPI_UX_TYPE);
   
   plusButton = new LXPAdjustPlusButton(tkux.remaining_x,
                                         tkux.bottom_y-tkux.timeDiffButton_dy,
