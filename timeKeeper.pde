@@ -63,10 +63,29 @@ int center_y = 370;
 int progress_y = 300;
 int progress_x = 350;
 
+int bottom_dy = 100;             //50
+
+int timeDiffButton_w = 100;      //50;
+int timeDiffButton_h = 80;       //40;
+int timeDiffButton_dx = 200;     //100
+int timeDiffButton_dy = 75;      //25
+int timeDiffText_dx = (timeDiffButton_dx+timeDiffButton_w)/2;
+float timeDiffFontSize = 48.0f;//24.0f
+
+int onDeck_x = 100;               // 100
+float onDeckFontSize = 64.0f;     // 32.0f
+
+float nowTimeFontSize = 96.0f;                  // 48.0f
+int nowTime_dy = 100;                           // 50
+float elapsedRemainingFontSize = 150.0f;        // 72.0f
+float elapsedRemainingLabelFontSize = 48.0f;    // 32.0f
+int elapsedRemainingLabel_dy = 200;             // 100
+
+float currentTitleFontSize = 96.0f;             // 64.0f
 
 void setup() {
-  size(1400, 740);
-  //fullScreen();
+  //size(1400, 740);
+  fullScreen();
   frameRate(10);
   times = new TimePeriods(sketchPath("")+"/timekeeper.txt");
   getNextPeriod();
@@ -75,7 +94,7 @@ void setup() {
   // compute size & locations for screen
   progress_w = (3 * width) / 4;
   
-  bottom_y = height - 50;
+  bottom_y = height - bottom_dy;
   center_x = width/2;
   center_y = height/2;
   progress_y = center_y - progress_h;
@@ -85,8 +104,12 @@ void setup() {
   remaining_x = progress_x + progress_w - 200;
   elapsed_remaining_y = progress_y - progress_h - 30;
   
-  plusButton = new LXPAdjustPlusButton(1200, bottom_y-25, 50, 40, "+");
-  minusButton = new LXPAdjustMinusButton(1300, bottom_y-25, 50, 40, "-");
+  plusButton = new LXPAdjustPlusButton(remaining_x,
+                                        bottom_y-timeDiffButton_dy,
+                                        timeDiffButton_w, timeDiffButton_h, "+");
+  minusButton = new LXPAdjustMinusButton(remaining_x+timeDiffButton_dx,
+                                        bottom_y-timeDiffButton_dy,
+                                        timeDiffButton_w, timeDiffButton_h, "-");
 }
 
 
@@ -94,26 +117,26 @@ void draw() {
   background(0);
   
   //adjust buttons
-  textSize(24.0f);
+  textSize(timeDiffFontSize);
   plusButton.draw(this);
   minusButton.draw(this);
   
   // time adjustment
   textAlign(PApplet.CENTER);
   fill(255);
-  text(Long.toString(adjust/60000), 1275, bottom_y);
+  text(Long.toString(adjust/60000), remaining_x+timeDiffText_dx, bottom_y-(timeDiffButton_dy/2));
   
   // the current time (now)
   now = new Date();
   nowString = nowDisplayFormat.format(now);
-  textSize(48.0f);
+  textSize(nowTimeFontSize);
   fill(255);
-  text(nowString, width/2 , 50);
+  text(nowString, width/2 , nowTime_dy);
   
   // on deck
-  textSize(32.0f);
+  textSize(onDeckFontSize);
   textAlign(PApplet.LEFT);
-  text("On Deck: " + onDeck, 100, bottom_y);
+  text("On Deck: " + onDeck, onDeck_x, bottom_y);
   
   // --------------- current time period ---------------
   
@@ -129,19 +152,19 @@ void draw() {
     
     // --------------- elapsed/remaining ---------------
     
-    textSize(72.0f);
+    textSize(elapsedRemainingFontSize);
     textAlign(PApplet.RIGHT);
     text(elapsedString, elapsed_x, elapsed_remaining_y);
-    textSize(32.0f);
-    text("Elapsed: ", elapsed_x, elapsed_remaining_y-100);
+    textSize(elapsedRemainingLabelFontSize);
+    text("Elapsed: ", elapsed_x, elapsed_remaining_y-elapsedRemainingLabel_dy);
     
-    textSize(72.0f);
+    textSize(elapsedRemainingFontSize);
     textAlign(PApplet.LEFT);
     text(remainingString, remaining_x, elapsed_remaining_y);
-    textSize(32.0f);
-    text("Remaining: ", remaining_x, elapsed_remaining_y-100);
+    textSize(elapsedRemainingLabelFontSize);
+    text("Remaining: ", remaining_x, elapsed_remaining_y-elapsedRemainingLabel_dy);
     
-    textSize(64.0f);
+    textSize(currentTitleFontSize);
     textAlign(PApplet.CENTER);
     text(current.title, width/2, progress_y+200);
     
@@ -172,6 +195,14 @@ void draw() {
     
   }    // current != null
   
+}
+
+void mousePressed() {
+  if ( mouseX > width - 200 ) {
+    if ( mouseY < 200 ) {
+      exit();
+    }
+  }
 }
 
 void mouseReleased() {
