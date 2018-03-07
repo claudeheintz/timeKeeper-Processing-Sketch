@@ -21,26 +21,25 @@ static  	int progress_x = 350;
 //-------------------------------------------- non computed values
 
 //                                                         //mac   --HDPI
-static    boolean use_full_screen = false;
 
-static  	int bottom_dy = 50;                              //50     --100
+static  	int bottom_dy = 100;                              //50     --100
 
-static  	int timeDiffButton_w = 50;                       //50;    --100
-static  	int timeDiffButton_h = 40;                       //40;    --80
-static  	int timeDiffButton_dx = 100;                     //100    --200
-static  	int timeDiffButton_dy = 25;                      //25     --75
+static  	int timeDiffButton_w = 100;                       //50;    --100
+static  	int timeDiffButton_h = 80;                       //40;    --80
+static  	int timeDiffButton_dx = 200;                     //100    --200
+static  	int timeDiffButton_dy = 75;                      //25     --75
 static  	int timeDiffText_dx = (timeDiffButton_dx+timeDiffButton_w)/2;
-static  	float timeDiffFontSize = 24.0f;                  //24.0f  -- 48.0f
+static  	float timeDiffFontSize = 48.0f;                  //24.0f  -- 48.0f
 
 static  	int onDeck_x = 100;                              // 100   --100
-static  	float onDeckFontSize = 32.0f;                    // 32.0f --64.0f
+static  	float onDeckFontSize = 64.0f;                    // 32.0f --64.0f
 
-static  	float nowTimeFontSize = 48.0f;                   // 48.0f     --96.0f
-static  	int nowTime_dy = 50;                             // 50        --100
-static  	float elapsedRemainingFontSize = 72.0f;          // 72.0f     --150.0f
-static  	float elapsedRemainingLabelFontSize = 32.0f;     // 32.0f     --48.0f
-static  	int elapsedRemainingLabel_dy = 100;              // 100       --200
+static  	float nowTimeFontSize = 96.0f;                   // 48.0f     --96.0f
+static  	int nowTime_dy = 100;                             // 50        --100
+static  	float elapsedRemainingFontSize = 150.0f;          // 72.0f     --150.0f
+static  	float elapsedRemainingLabelFontSize = 48.0f;     // 32.0f     --48.0f
+static  	int elapsedRemainingLabel_dy = 200;              // 100       --200
 
-static  	float currentTitleFontSize = 64.0f;              // 64.0f     --96.0f
+static  	float currentTitleFontSize = 96.0f;              // 64.0f     --96.0f
 
 }
