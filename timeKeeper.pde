@@ -60,10 +60,7 @@ void setup() {
   getNextPeriod();
   
   // compute size & locations for screen
-
-  //timeKeeperUX.initForApplet(this, timeKeeperUX.DEFAULT_UX_TYPE);
-  timeKeeperUX.initForApplet(this, timeKeeperUX.HDPI_UX_TYPE);
-
+  timeKeeperUX.initForApplet(this);
   
   plusButton = new LXPAdjustPlusButton(timeKeeperUX.plusX(),
                                        timeKeeperUX.plusY(),
