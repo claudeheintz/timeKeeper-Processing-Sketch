@@ -60,42 +60,39 @@ void setup() {
   getNextPeriod();
   
   // compute size & locations for screen
-  //tkux.initForApplet(this, tkux.DEFAULT_UX_TYPE);
-  tkux.initForApplet(this, tkux.HDPI_UX_TYPE);
+
+  //timeKeeperUX.initForApplet(this, timeKeeperUX.DEFAULT_UX_TYPE);
+  timeKeeperUX.initForApplet(this, timeKeeperUX.HDPI_UX_TYPE);
+
   
-  plusButton = new LXPAdjustPlusButton(tkux.remaining_x,
-                                        tkux.bottom_y-tkux.timeDiffButton_dy,
-                                        tkux.timeDiffButton_w, tkux.timeDiffButton_h, "+");
-  minusButton = new LXPAdjustMinusButton(tkux.remaining_x+tkux.timeDiffButton_dx,
-                                        tkux.bottom_y-tkux.timeDiffButton_dy,
-                                        tkux.timeDiffButton_w, tkux.timeDiffButton_h, "-");
+  plusButton = new LXPAdjustPlusButton(timeKeeperUX.plusX(),
+                                       timeKeeperUX.plusY(),
+                                       timeKeeperUX.plusW(),
+                                       timeKeeperUX.plusH(), "+");
+                                       
+  minusButton = new LXPAdjustMinusButton(timeKeeperUX.minusX(),
+                                       timeKeeperUX.minusY(),
+                                       timeKeeperUX.minusW(),
+                                       timeKeeperUX.minusH(), "-");
 }
 
 
 void draw() {
   background(0);
   
+  // time adjustment
+  timeKeeperUX.drawTimeOffset(this, Long.toString(adjust/60000));
   //adjust buttons
-  textSize(tkux.timeDiffFontSize);
   plusButton.draw(this);
   minusButton.draw(this);
-  
-  // time adjustment
-  textAlign(PApplet.CENTER);
-  fill(255);
-  text(Long.toString(adjust/60000), tkux.remaining_x+tkux.timeDiffText_dx, tkux.bottom_y-(tkux.timeDiffButton_dy/2));
   
   // the current time (now)
   now = new Date();
   nowString = nowDisplayFormat.format(now);
-  textSize(tkux.nowTimeFontSize);
-  fill(255);
-  text(nowString, width/2 , tkux.nowTime_dy);
+  timeKeeperUX.drawTimeNow(this, nowString);
   
   // on deck
-  textSize(tkux.onDeckFontSize);
-  textAlign(PApplet.LEFT);
-  text("On Deck: " + onDeck, tkux.onDeck_x, tkux.bottom_y);
+  timeKeeperUX.drawOnDeck(this, onDeck);
   
   // --------------- current time period ---------------
   
@@ -108,43 +105,20 @@ void draw() {
     elapsedString = time2String(et);
     remainingString = time2String(rt);
     
-    
+
     // --------------- elapsed/remaining ---------------
     
-    textSize(tkux.elapsedRemainingFontSize);
-    textAlign(PApplet.RIGHT);
-    text(elapsedString, tkux.elapsed_x, tkux.elapsed_remaining_y);
-    textSize(tkux.elapsedRemainingLabelFontSize);
-    text("Elapsed: ", tkux.elapsed_x, tkux.elapsed_remaining_y-tkux.elapsedRemainingLabel_dy);
+    timeKeeperUX.drawElapsed(this, elapsedString);
+    timeKeeperUX.drawRemaining(this, remainingString);
     
-    textSize(tkux.elapsedRemainingFontSize);
-    textAlign(PApplet.LEFT);
-    text(remainingString, tkux.remaining_x, tkux.elapsed_remaining_y);
-    textSize(tkux.elapsedRemainingLabelFontSize);
-    text("Remaining: ", tkux.remaining_x, tkux.elapsed_remaining_y-tkux.elapsedRemainingLabel_dy);
+    // --------------- current title ---------------
     
-    textSize(tkux.currentTitleFontSize);
-    textAlign(PApplet.CENTER);
-    text(current.title, width/2, tkux.progress_y+tkux.currentTitle_dy);
+
+    timeKeeperUX.drawCurrentTitle(this, current.title);
     
     // --------------- progress bar ---------------
     if ( et > 0 ) {
-      fill(64, 64, 96);
-      rect(tkux.progress_x,tkux.progress_y, tkux.progress_w, tkux.progress_h);
-      
-      if ( rt < 0 ) {
-        et = duration;
-      }
-      ex = map(et, 0, duration, 0, tkux.progress_w);
-      
-      if ( rt > 120000 ) {
-        fill(0, 255, 0);
-      } else if ( rt > 0 ) {
-        fill(255, 255, 0);
-      } else {
-        fill(255, 0, 0);
-      }
-      rect(tkux.progress_x, tkux.progress_y, ex, tkux.progress_h);
+      timeKeeperUX.drawProgressBar(this, et, rt, duration);
       
       if ( current.checkCompleted(n) ) {
         getNextPeriod();
