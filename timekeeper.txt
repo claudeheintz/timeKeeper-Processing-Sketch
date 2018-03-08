@@ -1,57 +1,57 @@
-Carleton, In Tune	03/07/18 11:00:00am CST	03/07/18 8:13:00am CST
-U MN Morris, Detachment	03/07/18 11:15:00am CST	03/07/18 11:18:00am CST
-UNI, Elemental	03/07/18 11:20:00am CST	03/07/18 11:23:00am CST
-UNI, Justify	03/07/18 11:25:00am CST	03/07/18 11:28:00am CST
-UW River Falls, unTitled IX	03/07/18 11:30:00am CST	03/07/18 11:33:00am CST
-UW River Falls, My Hell…	03/07/18 11:35:00am CST	03/07/18 11:38:00am CST
-UW Madison, Lost In Translation	03/07/18 11:40:00am CST	03/07/18 11:43:00am CST
-UW Madison, The Other and One	03/07/18 1:45:00pm CST	03/07/18 1:55:00pm CST
-Columbia, Gravity Falls	03/07/18 2:02:00pm CST	03/07/18 2:18:00pm CST
-Columbia, Who R U?	03/07/18 2:20:00pm CST	03/07/18 2:36:00pm CST
-Gustavus, From One Place…	03/07/18 2:38:00pm CST	03/07/18 2:54:00pm CST
-Gustavus, Room 31	03/07/18 2:56:00pm CST	03/07/18 3:12:00pm CST
-Hamline, V(ulnerable)	03/07/18 3:14:00pm CST	03/07/18 3:30:00pm CST
-Hamline, Finding Home	03/07/18 3:32:00pm CST	03/07/18 3:48:00pm CST
-U NE, One of Two Circles	03/07/18 3:50:00pm CST	03/07/18 4:06:00pm CST
-U NE, Your Thumb is Always…	03/07/18 4:08:00pm CST	03/07/18 4:24:00pm CST
-U IA, In Air to the Bone	03/07/18 4:26:00pm CST	03/07/18 4:42:00pm CST
-U IA, Mommie Queerest	03/07/18 4:44:00pm CST	03/07/18 5:00:00pm CST
-Beloit, THE CHROMATIC GOSPEL	03/02/18 8:00:00am CST	03/02/18 8:16:00am CST
-Beloit, 2mi via I-80 W	03/02/18 8:18:00am CST	03/02/18 8:34:00am CST
-IA State, HEAR/HERE	03/02/18 8:36:00am CST	03/02/18 8:52:00am CST
-IA State, Alpi	03/02/18 8:54:00am CST	03/02/18 9:10:00am CST
-Irvine Valley, Unwavering Struggle	03/02/18 9:12:00am CST	03/02/18 9:28:00am CST
-Irvine Valley, For Who	03/02/18 9:30:00am CST	03/02/18 9:46:00am CST
-UW Milwaukee, Interrobang…	03/02/18 9:48:00am CST	03/02/18 10:04:00am CST
-UW Milwaukee, To Do:	03/02/18 10:06:00am CST	03/02/18 10:22:00am CST
-Winona State, Xx	03/02/18 10:24:00am CST	03/02/18 10:40:00am CST
-Winona State, Ask the Moon	03/02/18 10:42:00am CST	03/02/18 10:58:00am CST
-Lindenwood, 12/29/2014	03/02/18 3:30:00pm CST	03/02/18 3:46:00pm CST
-Lindenwood, Orange NJ	03/02/18 3:48:00pm CST	03/02/18 4:04:00pm CST
-UW Whitewater, The Study of Wind	03/02/18 4:06:00pm CST	03/02/18 4:22:00pm CST
-UW Whitewater, Mechanism	03/02/18 4:24:00pm CST	03/02/18 4:40:00pm CST
-St. Olaf, After the Fall	03/02/18 4:42:00pm CST	03/02/18 4:58:00pm CST
-St. Olaf, Kalopsia	03/02/18 5:00:00pm CST	03/02/18 5:16:00pm CST
-U Minn., Unfolding Supports	03/02/18 5:18:00pm CST	03/02/18 5:34:00pm CST
-U Minn., A Note to a Friend	03/02/18 5:36:00pm CST	03/02/18 5:52:00pm CST
-Macalester, I Cling To	03/02/18 5:54:00pm CST	03/02/18 6:10:00pm CST
-Macalester, Just Her Time	03/02/18 6:12:00pm CST	03/02/18 6:28:00pm CST
-Alma College, Eight Cartographies	03/01/18 8:00:00am CST	03/01/18 8:16:00am CST
-Alma College, …Indivisible by Chemical…	03/01/18 8:18:00am CST	03/01/18 8:34:00am CST
-Casper College, Asphyxiate	03/01/18 8:36:00am CST	03/01/18 8:52:00am CST
-El Camino, Cubesthism	03/01/18 8:54:00am CST	03/01/18 9:10:00am CST
-MI State/Alma, Maculelé Revisited	03/01/18 9:12:00am CST	03/01/18 9:28:00am CST
-MN St. Mankato, Peek	03/01/18 9:30:00am CST	03/01/18 9:46:00am CST
-MN St. Mankato, Substance	03/01/18 9:48:00am CST	03/01/18 10:04:00am CST
-UW Stevens Point, For Those In Need…	03/01/18 10:06:00am CST	03/01/18 10:22:00am CST
-UW Stevens Point, Incandescence	03/01/18 10:24:00am CST	03/01/18 10:40:00am CST
-F1, 	03/01/18 3:30:00pm CST	03/01/18 3:46:00pm CST
-F2, 	03/01/18 3:48:00pm CST	03/01/18 4:04:00pm CST
-F3, 	03/01/18 4:06:00pm CST	03/01/18 4:22:00pm CST
-F4, 	03/01/18 4:24:00pm CST	03/01/18 4:40:00pm CST
-F5, 	03/01/18 4:42:00pm CST	03/01/18 4:58:00pm CST
-F6, 	03/01/18 5:00:00pm CST	03/01/18 5:16:00pm CST
-F7, 	03/01/18 5:18:00pm CST	03/01/18 5:34:00pm CST
-F8, 	03/01/18 5:36:00pm CST	03/01/18 5:52:00pm CST
-F9, 	03/01/18 5:54:00pm CST	03/01/18 6:10:00pm CST
-F10, 	03/01/18 6:12:00pm CST	03/01/18 6:28:00pm CST
+Carleton, In Tune	03/07/18 7:00:00pm CST	03/07/18 7:16:00pm CST
+U MN Morris, Detachment	03/08/18 8:18:00am CST	03/08/18 8:34:00am CST
+UNI, Elemental	03/08/18 8:36:00am CST	03/08/18 8:52:00am CST
+UNI, Justify	03/08/18 8:54:00am CST	03/08/18 9:10:00am CST
+UW River Falls, unTitled IX	03/08/18 9:12:00am CST	03/08/18 9:28:00am CST
+UW River Falls, My Hell…	03/08/18 9:30:00am CST	03/08/18 9:46:00am CST
+UW Madison, Lost In Translation	03/08/18 9:48:00am CST	03/08/18 10:04:00am CST
+UW Madison, The Other and One	03/08/18 10:06:00am CST	03/08/18 10:22:00am CST
+Columbia, Gravity Falls	03/08/18 2:02:00pm CST	03/08/18 2:18:00pm CST
+Columbia, Who R U?	03/08/18 2:20:00pm CST	03/08/18 2:36:00pm CST
+Gustavus, From One Place…	03/08/18 2:38:00pm CST	03/08/18 2:54:00pm CST
+Gustavus, Room 31	03/08/18 2:56:00pm CST	03/08/18 3:12:00pm CST
+Hamline, V(ulnerable)	03/08/18 3:14:00pm CST	03/08/18 3:30:00pm CST
+Hamline, Finding Home	03/08/18 3:32:00pm CST	03/08/18 3:48:00pm CST
+U NE, One of Two Circles	03/08/18 3:50:00pm CST	03/08/18 4:06:00pm CST
+U NE, Your Thumb is Always…	03/08/18 4:08:00pm CST	03/08/18 4:24:00pm CST
+U IA, In Air to the Bone	03/08/18 4:26:00pm CST	03/08/18 4:42:00pm CST
+U IA, Mommie Queerest	03/08/18 4:44:00pm CST	03/08/18 5:00:00pm CST
+Beloit, THE CHROMATIC GOSPEL	03/09/18 8:00:00am CST	03/09/18 8:16:00am CST
+Beloit, 2mi via I-80 W	03/09/18 8:18:00am CST	03/09/18 8:34:00am CST
+IA State, HEAR/HERE	03/09/18 8:36:00am CST	03/09/18 8:52:00am CST
+IA State, Alpi	03/09/18 8:54:00am CST	03/09/18 9:10:00am CST
+Irvine Valley, Unwavering Struggle	03/09/18 9:12:00am CST	03/09/18 9:28:00am CST
+Irvine Valley, For Who	03/09/18 9:30:00am CST	03/09/18 9:46:00am CST
+UW Milwaukee, Interrobang…	03/09/18 9:48:00am CST	03/09/18 10:04:00am CST
+UW Milwaukee, To Do:	03/09/18 10:06:00am CST	03/09/18 10:22:00am CST
+Winona State, Xx	03/09/18 10:24:00am CST	03/09/18 10:40:00am CST
+Winona State, Ask the Moon	03/09/18 10:42:00am CST	03/09/18 10:58:00am CST
+Lindenwood, 12/29/2014	03/09/18 3:30:00pm CST	03/09/18 3:46:00pm CST
+Lindenwood, Orange NJ	03/09/18 3:48:00pm CST	03/09/18 4:04:00pm CST
+UW Whitewater, The Study of Wind	03/09/18 4:06:00pm CST	03/09/18 4:22:00pm CST
+UW Whitewater, Mechanism	03/09/18 4:24:00pm CST	03/09/18 4:40:00pm CST
+St. Olaf, After the Fall	03/09/18 4:42:00pm CST	03/09/18 4:58:00pm CST
+St. Olaf, Kalopsia	03/09/18 5:00:00pm CST	03/09/18 5:16:00pm CST
+U Minn., Unfolding Supports	03/09/18 5:18:00pm CST	03/09/18 5:34:00pm CST
+U Minn., A Note to a Friend	03/09/18 5:36:00pm CST	03/09/18 5:52:00pm CST
+Macalester, I Cling To	03/09/18 5:54:00pm CST	03/09/18 6:10:00pm CST
+Macalester, Just Her Time	03/09/18 6:12:00pm CST	03/09/18 6:28:00pm CST
+Alma College, Eight Cartographies	03/10/18 8:00:00am CST	03/10/18 8:16:00am CST
+Alma College, …Indivisible by Chemical…	03/10/18 8:18:00am CST	03/10/18 8:34:00am CST
+Casper College, Asphyxiate	03/10/18 8:36:00am CST	03/10/18 8:52:00am CST
+El Camino, Cubesthism	03/10/18 8:54:00am CST	03/10/18 9:10:00am CST
+MI State/Alma, Maculelé Revisited	03/10/18 9:12:00am CST	03/10/18 9:28:00am CST
+MN St. Mankato, Peek	03/10/18 9:30:00am CST	03/10/18 9:46:00am CST
+MN St. Mankato, Substance	03/10/18 9:48:00am CST	03/10/18 10:04:00am CST
+UW Stevens Point, For Those In Need…	03/10/18 10:06:00am CST	03/10/18 10:22:00am CST
+UW Stevens Point, Incandescence	03/10/18 10:24:00am CST	03/10/18 10:40:00am CST
+F1, 	03/10/18 3:30:00pm CST	03/10/18 3:46:00pm CST
+F2, 	03/10/18 3:48:00pm CST	03/10/18 4:04:00pm CST
+F3, 	03/10/18 4:06:00pm CST	03/10/18 4:22:00pm CST
+F4, 	03/10/18 4:24:00pm CST	03/10/18 4:40:00pm CST
+F5, 	03/10/18 4:42:00pm CST	03/10/18 4:58:00pm CST
+F6, 	03/10/18 5:00:00pm CST	03/10/18 5:16:00pm CST
+F7, 	03/10/18 5:18:00pm CST	03/10/18 5:34:00pm CST
+F8, 	03/10/18 5:36:00pm CST	03/10/18 5:52:00pm CST
+F9, 	03/10/18 5:54:00pm CST	03/10/18 6:10:00pm CST
+F10, 	03/10/18 6:12:00pm CST	03/10/18 6:28:00pm CST
