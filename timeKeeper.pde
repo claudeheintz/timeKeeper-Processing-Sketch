@@ -60,11 +60,18 @@ void setup() {
   getNextPeriod();
   
   // compute size & locations for screen
-  tkux.initForApplet(this, tkux.DEFAULT_UX_TYPE);
-  //tkux.initForApplet(this, tkux.HDPI_UX_TYPE);
+  timeKeeperUX.initForApplet(this, timeKeeperUX.DEFAULT_UX_TYPE);
+  //timeKeeperUX.initForApplet(this, timeKeeperUX.HDPI_UX_TYPE);
   
-  plusButton = new LXPAdjustPlusButton(tkux.plusX(), tkux.plusY(), tkux.plusW(), tkux.plusH(), "+");
-  minusButton = new LXPAdjustMinusButton(tkux.minusX(), tkux.minusY(), tkux.minusW(), tkux.minusH(), "-");
+  plusButton = new LXPAdjustPlusButton(timeKeeperUX.plusX(),
+                                       timeKeeperUX.plusY(),
+                                       timeKeeperUX.plusW(),
+                                       timeKeeperUX.plusH(), "+");
+                                       
+  minusButton = new LXPAdjustMinusButton(timeKeeperUX.minusX(),
+                                       timeKeeperUX.minusY(),
+                                       timeKeeperUX.minusW(),
+                                       timeKeeperUX.minusH(), "-");
 }
 
 
@@ -72,7 +79,7 @@ void draw() {
   background(0);
   
   // time adjustment
-  tkux.drawTimeOffset(this, Long.toString(adjust/60000));
+  timeKeeperUX.drawTimeOffset(this, Long.toString(adjust/60000));
   //adjust buttons
   plusButton.draw(this);
   minusButton.draw(this);
@@ -80,10 +87,10 @@ void draw() {
   // the current time (now)
   now = new Date();
   nowString = nowDisplayFormat.format(now);
-  tkux.drawTimeNow(this, nowString);
+  timeKeeperUX.drawTimeNow(this, nowString);
   
   // on deck
-  tkux.drawOnDeck(this, onDeck);
+  timeKeeperUX.drawOnDeck(this, onDeck);
   
   // --------------- current time period ---------------
   
@@ -99,16 +106,16 @@ void draw() {
 
     // --------------- elapsed/remaining ---------------
     
-    tkux.drawElapsed(this, elapsedString);
-    tkux.drawRemaining(this, remainingString);
+    timeKeeperUX.drawElapsed(this, elapsedString);
+    timeKeeperUX.drawRemaining(this, remainingString);
     
     // --------------- current title ---------------
     
-    tkux.drawCurrentTitle(this, current.title);
+    timeKeeperUX.drawCurrentTitle(this, current.title);
     
     // --------------- progress bar ---------------
     if ( et > 0 ) {
-      tkux.drawProgressBar(this, et, rt, duration);
+      timeKeeperUX.drawProgressBar(this, et, rt, duration);
       
       if ( current.checkCompleted(n) ) {
         getNextPeriod();

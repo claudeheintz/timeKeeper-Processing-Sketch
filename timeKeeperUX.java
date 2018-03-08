@@ -1,11 +1,11 @@
 import processing.core.*; 
 
-// tkux is a static class designed to hold display location and size values
+// timeKeeperUX is a static class designed to hold display location and size values
 //
-// The tkux class also contains static methods for
+// The timeKeeperUX class also contains static methods for
 // displaying the parts of the timeKeeper interface.
 
-public class tkux {
+public class timeKeeperUX {
 
 // these locations and sizes are calculated from width and height after fullScreen() or size()
 
@@ -202,4 +202,4 @@ public static final int HDPI_UX_TYPE    = 1;
       p.rect(progress_x, progress_y, ex, progress_h);
   }
 
-} // <- class tkux
+} // <- class timeKeeperUX
