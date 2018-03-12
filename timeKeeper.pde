@@ -52,8 +52,8 @@ LXPAdjustMinusButton minusButton;
 
 
 void setup() {
-  //size(1400, 740);
-  fullScreen();
+  size(1400, 740);
+  //fullScreen();
   
   frameRate(10);
   times = new TimePeriods(sketchPath("")+"/timekeeper.txt");

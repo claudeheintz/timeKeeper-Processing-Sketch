@@ -45,13 +45,11 @@ MN St. Mankato, Peek	03/24/18 9:30:00am CDT	03/24/18 9:46:00am CDT
 MN St. Mankato, Substance	03/24/18 9:48:00am CDT	03/24/18 10:04:00am CDT
 UW Stevens Point, For Those In Need…	03/24/18 10:06:00am CDT	03/24/18 10:22:00am CDT
 UW Stevens Point, Incandescence	03/24/18 10:24:00am CDT	03/24/18 10:40:00am CDT
-F1, 	03/24/18 3:30:00pm CDT	03/24/18 3:46:00pm CDT
-F2, 	03/24/18 3:48:00pm CDT	03/24/18 4:04:00pm CDT
-F3, 	03/24/18 4:06:00pm CDT	03/24/18 4:22:00pm CDT
-F4, 	03/24/18 4:24:00pm CDT	03/24/18 4:40:00pm CDT
-F5, 	03/24/18 4:42:00pm CDT	03/24/18 4:58:00pm CDT
-F6, 	03/24/18 5:00:00pm CDT	03/24/18 5:16:00pm CDT
-F7, 	03/24/18 5:18:00pm CDT	03/24/18 5:34:00pm CDT
-F8, 	03/24/18 5:36:00pm CDT	03/24/18 5:52:00pm CDT
-F9, 	03/24/18 5:54:00pm CDT	03/24/18 6:10:00pm CDT
-F10, 	03/24/18 6:12:00pm CDT	03/24/18 6:28:00pm CDT
+Slater->Easy Expression, 	03/24/18 3:30:00pm CDT	03/24/18 3:46:00pm CDT
+Kate Corby->Giving Way, 	03/24/18 3:48:00pm CDT	03/24/18 4:04:00pm CDT
+Piper Morgan Hayes->Things..., 	03/24/18 4:06:00pm CDT	03/24/18 4:22:00pm CDT
+Michel Koukou->Conversation..., 	03/24/18 4:24:00pm CDT	03/24/18 4:40:00pm CDT
+Heather Klopchin->Ferdouganal, 	03/24/18 4:42:00pm CDT	03/24/18 4:58:00pm CDT
+Aaron Wood->, 	03/24/18 5:00:00pm CDT	03/24/18 5:16:00pm CDT
+Marlene Skog->Her Eyes..., 	03/24/18 5:18:00pm CDT	03/24/18 5:34:00pm CDT
+Cynthia Adams->Marching Backward, 	03/24/18 5:36:00pm CDT	03/24/18 5:52:00pm CDT
