@@ -89,7 +89,7 @@ public static final int HDPI_UX_TYPE    = 1;
      int type = getIntegerProperty(myprops, "display_type", DEFAULT_UX_TYPE, 0);
      
      // the following are calculated later and don't necessarily need to be read from
-     progress_h = getIntegerProperty(myprops, "progress_h", DEFAULT_UX_TYPE, progress_h);
+     progress_h = getIntegerProperty(myprops, "progress_h", type, progress_h);
      progress_w = getIntegerProperty(myprops, "progress_w", DEFAULT_UX_TYPE, progress_w);
      elapsed_x = getIntegerProperty(myprops, "elapsed_x", DEFAULT_UX_TYPE, elapsed_x);
      elapsed_remaining_y = getIntegerProperty(myprops, "elapsed_remaining_y", DEFAULT_UX_TYPE, elapsed_remaining_y);
@@ -114,6 +114,7 @@ public static final int HDPI_UX_TYPE    = 1;
      et_rt_label_font_size = getFloatProperty(myprops, "et_rt_label_font_size", type, et_rt_label_font_size);
      et_rt_label_dy = getIntegerProperty(myprops, "et_rt_label_dy", type, et_rt_label_dy);
      current_title_font_size = getFloatProperty(myprops, "current_title_font_size", type, current_title_font_size);
+     current_title_dy = getIntegerProperty(myprops, "current_title_dy", type, current_title_dy);
      warning_milliseconds = getLongProperty(myprops, "warning_milliseconds", type, warning_milliseconds);
      
      //calculated from above

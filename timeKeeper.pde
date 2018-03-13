@@ -275,7 +275,9 @@ Vector<String> substringsUsingSeperator(String s, String ss) {
   }
   
   Vector<String> readFile(String fileName) throws IOException {
-      BufferedReader br = new BufferedReader(new FileReader(fileName));
+      FileInputStream fis = new FileInputStream(fileName);
+      InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
+      BufferedReader br = new BufferedReader(isr);
       
       try {
           String line = br.readLine();
