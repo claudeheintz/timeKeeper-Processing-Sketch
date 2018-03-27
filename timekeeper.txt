@@ -1,55 +1,55 @@
-Carleton, In Tune	3/12/18 8:00:00am CDT	3/12/18 8:16:00am CDT
-U MN Morris, Detachment	3/12/18 8:18:00am CDT	3/12/18 8:34:00am CDT
-UNI, Elemental	3/12/18 8:36:00am CDT	3/12/18 8:52:00am CDT
-UNI, Justify	3/12/18 8:54:00am CDT	3/12/18 9:10:00am CDT
-UW River Falls, unTitled IX	3/12/18 9:12:00am CDT	3/12/18 9:28:00am CDT
-UW River Falls, My Hell…	3/12/18 9:30:00am CDT	3/12/18 9:46:00am CDT
-UW Madison, Lost In Translation	3/12/18 9:48:00am CDT	3/12/18 10:04:00am CDT
-UW Madison, The Other and One	3/12/18 10:06:00am CDT	3/12/18 10:22:00am CDT
-Columbia, Gravity Falls	3/12/18 2:02:00pm CDT	3/12/18 2:18:00pm CDT
-Columbia, Who R U?	3/12/18 2:20:00pm CDT	3/12/18 2:36:00pm CDT
-Gustavus, From One Place…	3/12/18 2:38:00pm CDT	3/12/18 2:54:00pm CDT
-Gustavus, Room 31	3/12/18 2:56:00pm CDT	3/12/18 3:12:00pm CDT
-Hamline, V(ulnerable)	3/12/18 3:14:00pm CDT	3/12/18 3:30:00pm CDT
-Hamline, Finding Home	3/12/18 3:32:00pm CDT	3/12/18 3:48:00pm CDT
-U NE, One of Two Circles	3/12/18 3:50:00pm CDT	3/12/18 4:06:00pm CDT
-U NE, Your Thumb is Always…	3/12/18 4:08:00pm CDT	3/12/18 4:24:00pm CDT
-U IA, In Air to the Bone	3/12/18 4:26:00pm CDT	3/12/18 4:42:00pm CDT
-U IA, Mommie Queerest	3/12/18 4:44:00pm CDT	3/12/18 5:00:00pm CDT
-Beloit, THE CHROMATIC GOSPEL	3/13/18 8:00:00am CDT	3/13/18 8:16:00am CDT
-Beloit, 2mi via I-80 W	3/13/18 8:18:00am CDT	3/13/18 8:34:00am CDT
-IA State, HEAR/HERE	3/13/18 8:36:00am CDT	3/13/18 8:52:00am CDT
-IA State, Alpi	3/13/18 8:54:00am CDT	3/13/18 9:10:00am CDT
-Irvine Valley, Unwavering Struggle	3/13/18 9:12:00am CDT	3/13/18 9:28:00am CDT
-Irvine Valley, For Who	3/13/18 9:30:00am CDT	3/13/18 9:46:00am CDT
-UW Milwaukee, Interrobang…	3/13/18 9:48:00am CDT	3/13/18 10:04:00am CDT
-UW Milwaukee, To Do:	3/13/18 10:06:00am CDT	3/13/18 10:22:00am CDT
-Winona State, Xx	3/13/18 10:24:00am CDT	3/13/18 10:40:00am CDT
-Winona State, Ask the Moon	3/13/18 10:42:00am CDT	3/13/18 10:58:00am CDT
-Lindenwood, 12/29/2014	3/13/18 3:30:00pm CDT	3/13/18 3:46:00pm CDT
-Lindenwood, Orange NJ	3/13/18 3:48:00pm CDT	3/13/18 4:04:00pm CDT
-UW Whitewater, The Study of Wind	3/13/18 4:06:00pm CDT	3/13/18 4:22:00pm CDT
-UW Whitewater, Mechanism	3/13/18 4:24:00pm CDT	3/13/18 4:40:00pm CDT
-St. Olaf, After the Fall	3/13/18 4:42:00pm CDT	3/13/18 4:58:00pm CDT
-St. Olaf, Kalopsia	3/13/18 5:00:00pm CDT	3/13/18 5:16:00pm CDT
-U Minn., Unfolding Supports	3/13/18 5:18:00pm CDT	3/13/18 5:34:00pm CDT
-U Minn., A Note to a Friend	3/13/18 5:36:00pm CDT	3/13/18 5:52:00pm CDT
-Macalester, I Cling To	3/13/18 5:54:00pm CDT	3/13/18 6:10:00pm CDT
-Macalester, Just Her Time	3/13/18 6:12:00pm CDT	3/13/18 6:28:00pm CDT
-Alma College, Eight Cartographies	3/14/18 8:00:00am CDT	3/14/18 8:16:00am CDT
-Alma College, …Indivisible by Chemical…	3/14/18 8:18:00am CDT	3/14/18 8:34:00am CDT
-Casper College, Asphyxiate	3/14/18 8:36:00am CDT	3/14/18 8:52:00am CDT
-El Camino, Cubesthism	3/14/18 8:54:00am CDT	3/14/18 9:10:00am CDT
-MI State/Alma, Maculelé Revisited	3/14/18 9:12:00am CDT	3/14/18 9:28:00am CDT
-MN St. Mankato, Peek	3/14/18 9:30:00am CDT	3/14/18 9:46:00am CDT
-MN St. Mankato, Substance	3/14/18 9:48:00am CDT	3/14/18 10:04:00am CDT
-UW Stevens Point, For Those In Need…	3/14/18 10:06:00am CDT	3/14/18 10:22:00am CDT
-UW Stevens Point, Incandescence	3/14/18 10:24:00am CDT	3/14/18 10:40:00am CDT
-Slater->Easy Expression, 	3/14/18 3:30:00pm CDT	3/14/18 3:46:00pm CDT
-Kate Corby->Giving Way, 	3/14/18 3:48:00pm CDT	3/14/18 4:04:00pm CDT
-Piper Morgan Hayes->Things..., 	3/14/18 4:06:00pm CDT	3/14/18 4:22:00pm CDT
-Michel Koukou->Conversation..., 	3/14/18 4:24:00pm CDT	3/14/18 4:40:00pm CDT
-Heather Klopchin->Ferdouganal, 	3/14/18 4:42:00pm CDT	3/14/18 4:58:00pm CDT
-Aaron Wood->, 	3/14/18 5:00:00pm CDT	3/14/18 5:16:00pm CDT
-Marlene Skog->Her Eyes..., 	3/14/18 5:18:00pm CDT	3/14/18 5:34:00pm CDT
-Cynthia Adams->Marching Backward, 	3/14/18 5:36:00pm CDT	3/14/18 5:52:00pm CDT
+Group1, Title1	03/22/18 8:00:00am CDT	03/22/18 8:16:00am CDT	x
+Group2, Title2	2	16
+Group3, Title3	2	16
+Group4, Title4	2	16
+Group5, Title5	2	16
+Group6, Title6	2	16
+Group7, Title7	2	16
+Group8, Title8	2	16
+Group9, Title9	03/22/18 2:02:00pm CDT	03/22/18 2:18:00pm CDT	x
+Group10, Title10	2	16
+Group11, Title11	2	16
+Group12, Title12	2	16
+Group13, Title13	2	16
+Group14, Title14	2	16
+Group15, Title15	2	16
+Group16, Title16	2	16
+Group17, Title17	2	16
+Group18, Title18	2	16
+Group19, Title19	03/23/18 8:00:00am CDT	03/23/18 8:16:00am CDT	x
+Group20, Title20	2	16
+Group21, Title21	2	16
+Group22, Title22	2	16
+Group23, Title23	2	16
+Group24, Title24	2	16
+Group25, Title25	2	16
+Group26, Title26	2	16
+Group27, Title27	2	16
+Group28, Title28	2	16
+Group29, Title29	03/23/18 3:30:00pm CDT	03/23/18 3:46:00pm CDT	x
+Group30, Title30	2	16
+Group31, Title31	2	16
+Group32, Title32	2	16
+Group33, Title33	2	16
+Group34, Title34	2	16
+Group35, Title35	2	16
+Group36, Title36	2	16
+Group37, Title37	2	16
+Group38, Title38	2	16
+Group39, Title39	03/27/18 8:00:00am CDT	03/27/18 8:16:00am CDT	x
+Group40, Title40	2	16
+Group41, Title41	2	16
+Group42, Title42	2	16
+Group43, Title43	2	16
+Group44, Title44	2	16
+Group45, Title45	2	16
+Group46, Title46	2	16
+Group47, Title47	2	16
+Group48, Title48	03/24/18 3:30:00pm CDT	03/24/18 3:46:00pm CDT	x
+Group49, Title49	2	16
+Group50, Title50	2	16
+Group51, Title51	2	16
+Group52, Title52	2	16
+Group53, Title53	2	16
+Group54, Title54	2	16
+Group55, Title55	2	16

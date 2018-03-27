@@ -1,3 +1,5 @@
+
+
 import java.util.*;
 import java.text.*;
 import java.io.*;
@@ -56,11 +58,14 @@ void setup() {
   //fullScreen();
   
   frameRate(10);
-  times = new TimePeriods(sketchPath("")+"/timekeeper.txt");
-  getNextPeriod();
   
   // compute size & locations for screen
   timeKeeperUX.initForApplet(this);
+
+  times = new TimePeriods(timeKeeperUX.getTimesFilePath(sketchPath("")));
+  getNextPeriod();
+  
+  
   
   plusButton = new LXPAdjustPlusButton(timeKeeperUX.plusX(),
                                        timeKeeperUX.plusY(),
@@ -213,6 +218,10 @@ String time2String(long time) {
   return (hrpart+minpart+secpart);
 }
 
+String time2dateString(long time) {
+  return textFormat.format(new Date(time));
+}
+
 String stringOfLength(String str, int len) {
   if ( str.length() < len ) {
     String rs = str;
@@ -300,13 +309,18 @@ Vector<String> substringsUsingSeperator(String s, String ss) {
     public boolean completed = false;
     public String title;
     
-    public TimePeriod(String str) {
+    public TimePeriod(String str, long last_end) {
       Vector<String> pv = substringsUsingSeperator(str, "\t");
-      if ( pv.size() == 3 ) {
+      if ( pv.size() == 4 ) {
         title = pv.elementAt(0);
         startTime = string2Time(pv.elementAt(1));
         endTime = string2Time(pv.elementAt(2));
         System.out.println(stringOfLength(title, 32) + ": " + stringOfLength(pv.elementAt(1), 23) + " - " + stringOfLength(pv.elementAt(2), 23) + " => " + time2String(endTime-startTime));
+      } else if ( pv.size() == 3 ) {
+        title = pv.elementAt(0);
+        startTime = last_end + timeKeeperUX.minutesToMilliseconds(pv.elementAt(1));
+        endTime = startTime + timeKeeperUX.minutesToMilliseconds(pv.elementAt(2));;
+        System.out.println(stringOfLength(title, 32) + ": " + time2dateString(startTime) + " - " + time2dateString(endTime) + " => " + time2String(endTime-startTime));
       } else {
         System.out.println("Error creating TimePeriod using " + str);
         title = "ERROR";
@@ -339,10 +353,14 @@ Vector<String> substringsUsingSeperator(String s, String ss) {
   
       if ( fv != null ) {
         String ps;
+        TimePeriod ntp;
+        long last_end = 0;
         Enumeration<String> en = fv.elements();
         while ( en.hasMoreElements() ) {
           ps = en.nextElement();
-          periods.addElement(new TimePeriod(ps));
+          ntp = new TimePeriod(ps, last_end);
+          last_end = ntp.endTime;
+          periods.addElement(ntp);
         }
       }
     }
