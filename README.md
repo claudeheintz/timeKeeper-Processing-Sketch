@@ -3,11 +3,17 @@
 timeKeeper is a Processing sketch that keeps track of working time periods.
 timeKeeper shows the progress of clock time for the duration of the period both in elapsed and remaining time.
 There is a progress bar that changes color as a warning when it is near the end of the working time.
+
+See "Releases" for stand-alone applications for MacOS, Windows 32bit and Windows 64bit.  Each application has a bundled Java(tm) runtime and does not require Processing.
+
+If using the source with Processing as a sketch, the LXForProcessing library (https://github.com/claudeheintz/LXforProcessing) is required.
+
+------------------------------------------ 
   
 timeKeeper uses two files for customizing its behavior and for defining the time periods.
 
 "timeKeeper.properties" is a Java properties file that contains user interface values for both regular and high DPI displays
-    (set display_type=1 for high DPI)
+    (set display_type=1 for Windows high DPI displays)
 "timeKeeper.properties" also contains the warning time in minutes and a path to the master time period file.
 
 File format of the time period file consists of tab separated fields on one of two types of lines:
@@ -16,7 +22,9 @@ File format of the time period file consists of tab separated fields on one of t
 
       [title] [tab] [start_time] [tab] [end_time]
 
-      Group1, Title1  03/22/18 8:00:00am CDT  03/22/18 8:16:00am CDT
+      Group1, Title1^03/22/18 8:00:00am CDT^03/22/18 8:16:00am CDT
+      
+      (caret ^ = tab)
 
    -OR-
 
@@ -24,4 +32,6 @@ File format of the time period file consists of tab separated fields on one of t
 
         [title] [tab] [">"] {tab] [gap in minutes] [tab] [period in minutes]
 
-        Group2, Title2  >  2  16
+        Group2, Title2^>^2^16
+        
+        (caret ^ = tab)
