@@ -1,3 +1,4 @@
+/*
 Copyright (c) 2018, Claude Heintz
 All rights reserved.
 
@@ -25,6 +26,7 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
 
 import java.util.*;
 import java.text.*;
@@ -47,17 +49,17 @@ import lx4p.*;
  *
  *   Full start and end time
  *
- *      [title] [tab] [start_time] [tab] [end_time] [tab] ["x"]
+ *      [title] [tab] [start_time] [tab] [end_time]
  *
- *      Group1, Title1  03/22/18 8:00:00am CDT  03/22/18 8:16:00am CDT  x
+ *      Group1, Title1  03/22/18 8:00:00am CDT  03/22/18 8:16:00am CDT
  *
  *   -OR-
  *
  *   Calculate from previous end
  *
- *        [title] [tab] [gap in minutes] [tab] [period in minutes]
+ *        [title] [tab] [">"] {tab] [gap in minutes] [tab] [period in minutes]
  *
- *        Group2, Title2  2  16
+ *        Group2, Title2  >  2  16
  */
 
 Date now;
@@ -366,15 +368,15 @@ Vector<String> substringsUsingSeperator(String s, String ss) {
     
     public TimePeriod(String str, long last_end) {
       Vector<String> pv = substringsUsingSeperator(str, "\t");
-      if ( pv.size() == 4 ) {
+      if ( pv.size() == 3 ) {
         title = pv.elementAt(0);
         startTime = string2Time(pv.elementAt(1));
         endTime = string2Time(pv.elementAt(2));
         System.out.println(stringOfLength(title, 32) + ": " + stringOfLength(pv.elementAt(1), 23) + " - " + stringOfLength(pv.elementAt(2), 23) + " => " + time2String(endTime-startTime));
-      } else if ( pv.size() == 3 ) {
+      } else if ( pv.size() == 4 ) {
         title = pv.elementAt(0);
-        startTime = last_end + timeKeeperUX.minutesToMilliseconds(pv.elementAt(1));
-        endTime = startTime + timeKeeperUX.minutesToMilliseconds(pv.elementAt(2));;
+        startTime = last_end + timeKeeperUX.minutesToMilliseconds(pv.elementAt(2));
+        endTime = startTime + timeKeeperUX.minutesToMilliseconds(pv.elementAt(3));
         System.out.println(stringOfLength(title, 32) + ": " + time2dateString(startTime) + " - " + time2dateString(endTime) + " => " + time2String(endTime-startTime));
       } else {
         System.out.println("Error creating TimePeriod using " + str);
