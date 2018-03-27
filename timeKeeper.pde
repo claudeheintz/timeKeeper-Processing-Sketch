@@ -1,9 +1,64 @@
+Copyright (c) 2018, Claude Heintz
+All rights reserved.
 
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of LXforProcessing nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import java.util.*;
 import java.text.*;
 import java.io.*;
+
+// requires LXforProcessing library => https://github.com/claudeheintz/LXforProcessing
 import lx4p.*;
+
+/*
+ *  TimeKeeper app keeps track of working time periods.
+ *  TimeKeeper shows the progress of clock time for the duration of the period both in elapsed and remaining time.
+ *  There is a progress bar that changes color as a warning when it is near the end of the working time.
+ *  
+ *  TimeKeeper uses two files for customizing its behavior and for defining the time periods.
+ *
+ *  "timeKeeper.properties" is a Java properties file that contains user interface values for both regular and high DPI displays
+ *  "timeKeeper.properties" also contains the warning time in minutes and a path to the master time period file
+ *
+ *  File format of the time period file consists of tab separated fields on one of two types of lines:
+ *
+ *   Full start and end time
+ *
+ *      [title] [tab] [start_time] [tab] [end_time] [tab] ["x"]
+ *
+ *      Group1, Title1  03/22/18 8:00:00am CDT  03/22/18 8:16:00am CDT  x
+ *
+ *   -OR-
+ *
+ *   Calculate from previous end
+ *
+ *        [title] [tab] [gap in minutes] [tab] [period in minutes]
+ *
+ *        Group2, Title2  2  16
+ */
 
 Date now;
 SimpleDateFormat nowDisplayFormat = new SimpleDateFormat("hh:mm:ss");
