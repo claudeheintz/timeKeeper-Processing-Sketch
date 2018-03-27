@@ -1,12 +1,46 @@
+/*
+Copyright (c) 2018, Claude Heintz
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of LXforProcessing nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 import processing.core.*; 
 import java.util.*;
 import java.io.*;
 
-// timeKeeperUX is a static class designed to hold display location and size values
-//
-// The timeKeeperUX class also contains static methods for
-// displaying the parts of the timeKeeper interface.
 
+/*
+ * timeKeeperUX is a static class designed to hold display location and size values and provide utility functions
+ *
+ * The timeKeeperUX class also contains static methods for
+ * displaying the parts of the timeKeeper interface.
+ *
+ */
+ 
 public class timeKeeperUX {
 
 // these locations and sizes are calculated from width and height after fullScreen() or size()
@@ -49,6 +83,7 @@ static  	float current_title_font_size = 64.0f;             // 64.0f      --96.0
 static    int   current_title_dy = 200;                      // 200        --255
 
 static    long  warning_milliseconds = 120000;
+static  String  times_file_path      = null;
 
 public static final int DEFAULT_UX_TYPE = 0;
 public static final int HDPI_UX_TYPE    = 1;
@@ -115,11 +150,42 @@ public static final int HDPI_UX_TYPE    = 1;
      et_rt_label_dy = getIntegerProperty(myprops, "et_rt_label_dy", type, et_rt_label_dy);
      current_title_font_size = getFloatProperty(myprops, "current_title_font_size", type, current_title_font_size);
      current_title_dy = getIntegerProperty(myprops, "current_title_dy", type, current_title_dy);
-     warning_milliseconds = getLongProperty(myprops, "warning_milliseconds", type, warning_milliseconds);
+     
+     float warning_min = getFloatProperty(myprops, "warning_min", type, (float)(warning_milliseconds/60000.0));
+     warning_milliseconds = minutesToMilliseconds(warning_min);
      
      //calculated from above
      timeadj_text_dx = (timeadj_button_dx+timeadj_button_w)/2;
      timeadj_text_dy = timeadj_button_dy - (int)((timeadj_button_h+timeadj_font_size)/2);
+     
+     //path to file
+     times_file_path = (String)myprops.get("times_file_path");
+  }
+  
+/*
+ *  Path to times file
+ *  Can be full path or just a file in the sketch working directory
+ *
+ *  File format consists of tab separated fields on one of two types of lines:
+ *
+ *   Full start and end times
+ *      [title][tab][start_time][tab][end_time][tab]["x"]
+ *
+ *   -OR-
+ *
+ *   Calculate from previous end
+ *        [title][tab][gap in minutes][tab][period in minutes]
+ *
+ *
+ */
+  public static String getTimesFilePath(String def_dir) {
+    if ( times_file_path == null ) {
+          times_file_path = "timekeeper.txt";
+     }
+     if ( ! times_file_path.startsWith("/") ) {
+          times_file_path = def_dir+"/"+times_file_path;
+     }
+    return times_file_path;
   }
 
   public static int getIntegerProperty(Properties myprops, String kstr, int type, int def) {
@@ -182,6 +248,15 @@ public static final int HDPI_UX_TYPE    = 1;
       return( Integer.parseInt(s) );
     } catch ( NumberFormatException e ) {}
     return (0);
+  }
+  
+  public static long minutesToMilliseconds(String str) {
+    float min = timeKeeperUX.safeParseFloat(str);
+    return minutesToMilliseconds(min);
+  }
+  
+  public static long minutesToMilliseconds(float min) {
+    return (long) min * 60000;
   }
 
   //  button location and size =========================================

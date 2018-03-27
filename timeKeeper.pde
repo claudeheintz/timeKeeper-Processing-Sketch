@@ -1,7 +1,66 @@
+/*
+Copyright (c) 2018, Claude Heintz
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of LXforProcessing nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 import java.util.*;
 import java.text.*;
 import java.io.*;
+
+// requires LXforProcessing library => https://github.com/claudeheintz/LXforProcessing
 import lx4p.*;
+
+/*
+ *  TimeKeeper app keeps track of working time periods.
+ *  TimeKeeper shows the progress of clock time for the duration of the period both in elapsed and remaining time.
+ *  There is a progress bar that changes color as a warning when it is near the end of the working time.
+ *  
+ *  TimeKeeper uses two files for customizing its behavior and for defining the time periods.
+ *
+ *  "timeKeeper.properties" is a Java properties file that contains user interface values for both regular and high DPI displays
+ *  "timeKeeper.properties" also contains the warning time in minutes and a path to the master time period file
+ *
+ *  File format of the time period file consists of tab separated fields on one of two types of lines:
+ *
+ *   Full start and end time
+ *
+ *      [title] [tab] [start_time] [tab] [end_time]
+ *
+ *      Group1, Title1  03/22/18 8:00:00am CDT  03/22/18 8:16:00am CDT
+ *
+ *   -OR-
+ *
+ *   Calculate from previous end
+ *
+ *        [title] [tab] [">"] {tab] [gap in minutes] [tab] [period in minutes]
+ *
+ *        Group2, Title2  >  2  16
+ */
 
 Date now;
 SimpleDateFormat nowDisplayFormat = new SimpleDateFormat("hh:mm:ss");
@@ -52,15 +111,18 @@ LXPAdjustMinusButton minusButton;
 
 
 void setup() {
-  //size(1400, 740);
-  fullScreen();
+  size(1400, 740);
+  //fullScreen();
   
   frameRate(10);
-  times = new TimePeriods(sketchPath("")+"/timekeeper.txt");
-  getNextPeriod();
   
   // compute size & locations for screen
   timeKeeperUX.initForApplet(this);
+
+  times = new TimePeriods(timeKeeperUX.getTimesFilePath(sketchPath("")));
+  getNextPeriod();
+  
+  
   
   plusButton = new LXPAdjustPlusButton(timeKeeperUX.plusX(),
                                        timeKeeperUX.plusY(),
@@ -213,6 +275,10 @@ String time2String(long time) {
   return (hrpart+minpart+secpart);
 }
 
+String time2dateString(long time) {
+  return textFormat.format(new Date(time));
+}
+
 String stringOfLength(String str, int len) {
   if ( str.length() < len ) {
     String rs = str;
@@ -300,13 +366,18 @@ Vector<String> substringsUsingSeperator(String s, String ss) {
     public boolean completed = false;
     public String title;
     
-    public TimePeriod(String str) {
+    public TimePeriod(String str, long last_end) {
       Vector<String> pv = substringsUsingSeperator(str, "\t");
       if ( pv.size() == 3 ) {
         title = pv.elementAt(0);
         startTime = string2Time(pv.elementAt(1));
         endTime = string2Time(pv.elementAt(2));
         System.out.println(stringOfLength(title, 32) + ": " + stringOfLength(pv.elementAt(1), 23) + " - " + stringOfLength(pv.elementAt(2), 23) + " => " + time2String(endTime-startTime));
+      } else if ( pv.size() == 4 ) {
+        title = pv.elementAt(0);
+        startTime = last_end + timeKeeperUX.minutesToMilliseconds(pv.elementAt(2));
+        endTime = startTime + timeKeeperUX.minutesToMilliseconds(pv.elementAt(3));
+        System.out.println(stringOfLength(title, 32) + ": " + time2dateString(startTime) + " - " + time2dateString(endTime) + " => " + time2String(endTime-startTime));
       } else {
         System.out.println("Error creating TimePeriod using " + str);
         title = "ERROR";
@@ -339,10 +410,14 @@ Vector<String> substringsUsingSeperator(String s, String ss) {
   
       if ( fv != null ) {
         String ps;
+        TimePeriod ntp;
+        long last_end = 0;
         Enumeration<String> en = fv.elements();
         while ( en.hasMoreElements() ) {
           ps = en.nextElement();
-          periods.addElement(new TimePeriod(ps));
+          ntp = new TimePeriod(ps, last_end);
+          last_end = ntp.endTime;
+          periods.addElement(ntp);
         }
       }
     }
