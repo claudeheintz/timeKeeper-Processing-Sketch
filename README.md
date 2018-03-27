@@ -4,7 +4,7 @@ timeKeeper is a Processing sketch that keeps track of working time periods.
 timeKeeper shows the progress of clock time for the duration of the period both in elapsed and remaining time.
 There is a progress bar that changes color as a warning when it is near the end of the working time.
 
-See "Releases" for stand-alone applications for MacOS, Windows 32bit and Windows 64bit.  Each application has a bundled Java(tm) runtime and does not require Processing.
+See "Releases" for stand-alone applications for MacOS, Windows 32bit and Windows 64bit.  Each application has a bundled Java(tm) runtime and does not require Processing.    The MacOS application is code-signer by DeveloperID.  The Windows versions are unsigned.
 
 If using the source with Processing as a sketch, the LXForProcessing library (https://github.com/claudeheintz/LXforProcessing) is required.
 
@@ -35,3 +35,9 @@ File format of the time period file consists of tab separated fields on one of t
         Group2, Title2^>^2^16
         
         (caret ^ = tab)
+
+In order to see how timeKeeper works, change the first line of the default timeKeeper.txt file to today's date and time (now for the start and 5 minutes from now for the end).  If it is 1pm on July 7th, central daylight time, the first line would read:
+
+      Group1, Title1^07/07/18 1:00:00pm CDT^07/07/18 1:05:00pm CDT
+
+(where each caret ^ =  tab)
